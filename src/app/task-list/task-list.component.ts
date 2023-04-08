@@ -7,12 +7,14 @@ import { ActivatedRoute, Route } from '@angular/router';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit{
+
   constructor(private route: ActivatedRoute){}
+
   ngOnInit(): void {
     var date: Date = new Date(this.route.snapshot.params['date'])
     console.log(date);
-    
   }
+
 tasks: Task[] = [
     new Task('Get Laundry'),
     new Task('Take out trash'),
@@ -41,6 +43,6 @@ class Task {
   }
 
   public isDone = false
-  
+
 }
 
